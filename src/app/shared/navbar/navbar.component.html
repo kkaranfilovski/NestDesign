@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary " data-bs-theme="dark" [ngClass]="{ 'transparent-navbar': isTransparent }">
   <div class="container">
     <a class="navbar-brand">
-      <img src="./assets/logo/logo2.webp" alt="logo" width="120" height="60">
+      <img src="./assets/logo/logo2.webp" id="logo" alt="logo" width="120" height="60" routerLink="/home">
     </a>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -12,7 +12,7 @@
     <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link"routerLink="/home">Home</a>
+          <a class="nav-link" routerLink="/home">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/about">About</a>

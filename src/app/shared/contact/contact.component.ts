@@ -25,17 +25,12 @@ export class ContactComponent implements OnInit {
   }
 
   submitForm() {
-    debugger;
     this.emailService.sendEmail(this.contactForm)
     .subscribe({
-      next: (response) => {
-        console.log(response)
-        debugger;
+      next: () => {
         this.formStatus.innerHTML = 'Thanks for your submission!';
       },
-      error: (error) => {
-        // Handle error
-        console.log(error)
+      error: () => {
         this.formStatus.innerHTML = 'There was an error submitting the form.';
       }
     });

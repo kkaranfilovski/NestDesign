@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,14 +8,15 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 })
 
 export class NavbarComponent implements OnInit {
-  isTransparent: boolean = false; // Default to non-transparent navbar
+  isTransparent: boolean = false;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
+
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.isTransparent = event.url === '/home'; // Set to transparent for the Home route
+        this.isTransparent = event.url === '/home';
       }
     });
   }
