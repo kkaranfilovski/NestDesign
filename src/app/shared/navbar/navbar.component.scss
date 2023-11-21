@@ -1,0 +1,24 @@
+.navbar-nav .nav-item .nav-link {
+    font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+    line-height: 1.65;
+    letter-spacing: .05em;
+    font-weight: 500;
+    color: #fff!important;
+    cursor: pointer;
+    padding-right: 100px;
+    font-size: x-large;
+}
+
+/* Navbar */
+.navbar {
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.transparent-navbar {
+    background: transparent !important;
+}

@@ -1,0 +1,15 @@
+/* Carousel wrapper */
+.carousel-wrapper {
+    position: relative;
+    height: 100vh;
+    margin-top: 0; /* Remove default margin */
+}
+
+/* Carousel */
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
