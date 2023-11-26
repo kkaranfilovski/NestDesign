@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -8,7 +8,9 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 
 export class NavbarComponent implements OnInit {
-  isTransparent: boolean = false;
+  isTransparent: boolean = true;
+  transparentRoutes: string[] = ['/', '/home'];
+  @ViewChild('navbarCollapse') navbarCollapse: ElementRef | undefined;
 
   constructor(private router: Router) {}
 
@@ -16,8 +18,16 @@ export class NavbarComponent implements OnInit {
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.isTransparent = event.url === '/home';
+        console.log(event);
+        
+        this.isTransparent = this.transparentRoutes.includes(event.url);
       }
     });
+  }
+
+  closeNavbar() {
+    if (this.navbarCollapse) {
+      this.navbarCollapse.nativeElement.classList.remove('show');
+    }
   }
 }

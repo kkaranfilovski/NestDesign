@@ -3,7 +3,7 @@
     line-height: 1.65;
     letter-spacing: .05em;
     font-weight: 500;
-    color: #fff!important;
+    color: #fff;
     cursor: pointer;
     padding-right: 100px;
     font-size: x-large;
@@ -11,7 +11,11 @@
 
 /* Navbar */
 .navbar {
-    height: 100px;
+    height: 10vh;
+}
+
+.transparent-navbar {
+    background: transparent !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -19,10 +23,10 @@
     z-index: 1000;
 }
 
-.transparent-navbar {
-    background: transparent !important;
-}
-
 #logo {
     cursor: pointer;
+}
+
+.dark-bg {
+    background-color: #2b3134;
 }

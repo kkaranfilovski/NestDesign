@@ -10,7 +10,6 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { AboutComponent } from './shared/about/about.component';
 import { ContactComponent } from './shared/contact/contact.component';
 import { HomeComponent } from './shared/home/home.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -27,7 +26,6 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

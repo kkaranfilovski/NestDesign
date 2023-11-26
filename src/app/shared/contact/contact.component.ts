@@ -10,29 +10,8 @@ import { EmailService } from 'src/app/services/email.service';
 export class ContactComponent implements OnInit {
 
   constructor(
-    private emailService: EmailService
     ) { }
-
-  contactForm!: UntypedFormGroup;
-  @ViewChild('formStatus') formStatus: any; 
   
   ngOnInit() {
-    this.contactForm = new UntypedFormGroup({
-      nameValue: new UntypedFormControl("", Validators.required),
-      emailValue: new UntypedFormControl("", [Validators.required, Validators.email]),
-      messageValue: new UntypedFormControl("", Validators.required)
-    }, { updateOn: 'change' });
-  }
-
-  submitForm() {
-    this.emailService.sendEmail(this.contactForm)
-    .subscribe({
-      next: () => {
-        this.formStatus.innerHTML = 'Thanks for your submission!';
-      },
-      error: () => {
-        this.formStatus.innerHTML = 'There was an error submitting the form.';
-      }
-    });
   }
 }
